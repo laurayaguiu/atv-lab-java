@@ -29,7 +29,7 @@ public class Conta{
     }
 
     public double getSaldo() {
-        return saldo
+        return saldo;
     }
 
     public boolean depositar(double valor) {
@@ -42,14 +42,9 @@ public class Conta{
         }
     }
 
-    /*
-    Por padrão, toda classe em Java herda o método toString() da classe Object
-    Aqui, titular é um objeto da classe Cliente.
-    A classe Cliente define os métodos getNome() e getCpf().
-    Como titular foi inicializado no construtor, a conta pode usar esses métodos para pegar informações do cliente
-    */
+    
     @Override
     public String toString() {
-        return "Agência: %d, Conta: %d, Titular: %s, CPF: %s, Saldo: %.2f", agencia, numero, titular.getNome(), titular.getCpf(), saldo
+        return String.format("Agência: %d, Conta: %d, Titular: %s, CPF: %s, Saldo: %.2f", agencia, numero, titular.getNome(), titular.getCpf(), saldo);
     }
 }
